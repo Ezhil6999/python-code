@@ -41,3 +41,9 @@ print(doorNo)
 # return / yield /in / class / def
 # try / except / finally / raise / assert
 # pass /with
+
+# DATATYPES:
+# Dynamically Typed  
+
+# int /float /complex /bool /str /bytes /bytearrsy 
+# range /list /set /frozenset /tuple /dict /None
