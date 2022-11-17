@@ -32,3 +32,12 @@ doorNo=15
 print(doorNo)
 
 #output:15
+ 
+# RESERVED WORDS
+# True / False /None
+# and / or / not / is /as /in /lambda /nonlocal
+# if / elif / else /from /global /import
+# while / for / break / continue
+# return / yield /in / class / def
+# try / except / finally / raise / assert
+# pass /with
