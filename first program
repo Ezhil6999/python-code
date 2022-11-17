@@ -47,3 +47,9 @@ print(doorNo)
 
 # int /float /complex /bool /str /bytes /bytearrsy 
 # range /list /set /frozenset /tuple /dict /None
+
+no=10
+print(no) #parameters / argument -->with in the bracket-->input
+
+print(type(no))
+# output : <class 'int'>
