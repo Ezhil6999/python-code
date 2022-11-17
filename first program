@@ -1,0 +1,17 @@
+#Python Tutorial STARTING DATE : 17.11.2022
+print("My first program")
+print('My first program')
+print(5+10)
+print(5*10)
+print(5+2*5)
+print((5+2)*0)
+print(100/3)
+print(100-3)
+print("new")
+print(100//3)
+print(2*3)
+print("new")
+print(2**3) # 2 power 3
+print(100%7)
+print(100%9)
+print(100%2)
