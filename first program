@@ -53,3 +53,116 @@ print(no) #parameters / argument -->with in the bracket-->input
 
 print(type(no))
 # output : <class 'int'>
+
+no="ezhil"
+print(no) #parameters / argument -->with in the bracket-->input
+
+print(type(no))
+output:ezhil
+<class 'str'>
+
+no="ezhil"
+print(no) #id-->Address 
+print(id(no)) 
+
+output : ezhil
+1549573289264
+
+no="ezhil"
+print(no) 
+print(len(no))
+ output:ezhil
+5
+
+no=12.23456576537
+print(no) 12.23456576537
+print(round(no))-->12
+print(round(no,3))-->12.235
+
+#int datatype
+
+# it has Decimal Form
+# it has Binary Form   -->0s & 1s
+#  it has octal form
+# it has hexadecimal form
+no=1223 #-->decimal form
+no=0B0101 #-->binary
+print(no)
+no=0b1001 #-->binary
+print(no)
+no=0o0101 #-->octal
+print(no)
+no=0O1001  #-->octal
+print(no)
+no=0X123  #-->Hexadecimal
+print(no)  #-->Hexadecimal
+no=0xabc   #-->Hexadecimal
+print(no)  #-->Hexadecimal
+no=0XCAB
+print(no)  #-->Hexadecimal
+
+no=bin(20)
+print(no)
+no=oct(20)
+print(no)
+no=hex(20)
+print(no)
+ output :0b10100
+0o24
+0x14
+
+no=7.7e3  #e3-->10 power 3
+print(no)
+output:7700.0
+
+#complex data type
+#Real part +Imaginary part
+no=5+10j
+print(no)
+print(type(no))
+no2=10+3j
+total=no+no2
+print(total)
+ print(no2.real)
+print(no2.imag)
+
+ output:(5+10j)
+<class 'complex'>
+(15+13j)
+10.0
+3.0
+
+#Boolean Datatype
+
+print(True+True)  #True-->1
+print(True+False)  #False-->0
+print(False+False)
+
+output:2
+1
+0
+
+# String Datatype:
+
+sen="""ezhil's maon said "obay me" byt he's not obayed"""
+sen1='''ezhil's maon said "obay me" byt he's not obayed'''
+sen2="""ezhil's maon said
+       "obay me" byt he's
+      not obayed"""
+
+print(sen)#"""vjh""" -->triple
+print(sen1)#'''vjh''' -->triple
+print(sen2)#'''vjh''' -->MultiLine
+name='ezhikl'
+c="raj"
+print(name+c)#-->no spce
+print(name,c)#-->with space
+
+name='ezhikl'
+c=638104
+print(name,c)#-->with space and no datatype error
+
+# String Slicing:
+name="ezhil"
+print(name[0])
+print(name[3])
