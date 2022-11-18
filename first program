@@ -166,3 +166,89 @@ print(name,c)#-->with space and no datatype error
 name="ezhil"
 print(name[0])
 print(name[3])
+print(name[-1])
+print(name[-3])
+name="rajarajachozhan"
+print(name[0:5])
+print(name[7:])
+print(name[:4])
+print(name[4:])
+print(name[-5:-1])
+print(name[::]) #-->printd all the value
+print(name[1:10:2]) #every second letter from 1 aaaac
+print(name[8:1:-1]) #reverse
+
+
+#TypeCasting: int
+no=99.45
+print(int(no)) #-->99
+
+#Float
+no="10"
+print(float(True))
+print(float(no))
+
+#complex
+print(complex(10))
+print(complex(5.4))
+print(complex(True))
+print(complex(False))
+print(complex("12"))
+print(complex("12.7"))
+print(complex(120,10))
+
+#bool()
+print(bool(0))
+print(bool(1))
+print(bool(1.5))
+print(bool(0.3))
+print(bool(0.0))
+print(bool(5+4j))
+print(bool(0+4j))
+print(bool(0+0j))
+print(bool("abc"))
+print(bool(""))
+print(bool("True"))
+print(bool("False"))
+    
+#str()
+print(str(10))
+print("price"+ str(10))
+print(str(34.4))
+print(str(5+10j))
+print(str(True))
+print(str(False))
+
+#All fundamental(int float str complex bo ol) datatype are immutable
+no=10
+print(id(no))
+no2=10
+print(id(no2))
+#hasename memory address
+no2=20
+print(id(no2))
+#once we change value of an identifier belongs to fundamental
+#datatypes it wont get change in memory instead of that , a new memory is
+# created and the new value will be allocated
+
+no=10
+no2=10
+print(no==no2) # true
+print(no is no2) #true
+no2=10.0
+print(no==no2)# true
+print(no is no2)#false  check the memory address
+print(no is not no2)  #true
+
+#bytes-->group of byte numbers
+#1byte-->8bit -->2 power 8-->256
+#we can store upto 256
+value=[90,80,70,60,67] #list
+print(value)
+value=bytes(value)  # type casting
+print(type(value))
+print(value)
+print(value[0])  #90
+for no in value:
+    print(no)
+
