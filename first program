@@ -252,3 +252,88 @@ print(value[0])  #90
 for no in value:
     print(no)
 
+# string comparision like ==,>,< are one in lexicograpical order
+print('I/'am fine')    #--->/ escpe character
+
+#no1=10,no2=20,no3=30--->it is a wrong declaration
+no1,no2=30,20
+no3=30 if no1<no2 else 40
+print(no3)
+
+ #membership operator in, not in
+sen='today'
+print('to'in sen)
+print('ko'not in sen)
+
+#operator chaining
+
+print(100<500<300)
+print(100<200<300)
+
+#Bitwise operator
+# --> & | ^ ~ >> <<
+print(4&5)
+ #  4-->0100  5-->0101  which is obtain by LCM
+ # --> for & we hava to multiply 4 and 5 0 1 0 0
+  # -->                                  0 1 0 1
+   # -->                                ---------
+    # -->                                0 1 0 0--->4
+     # -->output is 4
+print(4|5)
+ #  4-->0100  5-->0101  which is obtain by LCM
+ # --> for | we hava to add 4 and 5      0 1 0 0
+  # -->                                  0 1 0 1
+   # -->                                ---------
+    # -->                                0 1 0 1--->5
+     # -->output is 5
+print(4^5) #-->exor-->same value 0 different value 1
+ #  4-->0100  5-->0101  which is obtain by LCM
+ # --> for & we hava to multiply 4 and 5 0 1 0 0
+  # -->                                  0 1 0 1
+   # -->                                ---------
+    # -->                                0 0 0 1--->1
+     # -->output is 1
+print(~10)
+ 
+     # -->output is -11
+     
+#shift operatator
+# << >>
+print(10<<1)
+print(10<<2)
+print(10<<3)
+print(10>>1)
+print(10>>2)
+print(10>>3)
+
+
+#logical operator
+print(5 or 4)
+print(5 and 4)
+
+#Modules -->python file
+#variable ,function call
+#function define
+
+def big(no1,no2):
+    if no1>no2:
+        print(no1, " is greater")
+    else:
+        print(no2," is grater")
+no1=int(input("enter the number"))
+no2=int(input("enter the number"))
+big(no1,no2)
+-------------------------------------------
+
+def big(no1,no2):
+    pass
+no1=int(input("enter the number"))
+no2=int(input("enter the number"))
+big(no1,no2)
+-----------------------------------------------------
+
+
+
+
+
+
