@@ -332,6 +332,57 @@ no2=int(input("enter the number"))
 big(no1,no2)
 -----------------------------------------------------
 
+s="ezhil RAJESH"
+print(s)
+print(s.upper())
+print(s.isupper())
+print(s.lower())
+print(s.islower())
+print(s.capitalize())
+print(s.title())
+print(s.count("i"))
+print(s.count("I"))
+print(s.endswith("SH"))
+print(s.find("A"))
+print(s.find("A",5))
+print(s.find("A" ,5))
+print(s.replace("A","I"))
+print(s.isalnum())
+print(s.isalpha())
+print(s.isdecimal())
+print(s.isdigit())
+print(s.isnumeric())
+
+s="he\nis\ngood"
+print(s)
+print(s.splitlines())
+print(s.splitlines(True))
+s="hi ezhil raj"
+print(s.split(" "))
+
+s="    Ezhil      "
+print(s.strip())
+print(s.lstrip())
+print(s.rstrip())
+
+s='12-03-2002'
+print(s.partition("-"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
