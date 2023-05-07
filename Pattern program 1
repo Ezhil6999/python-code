@@ -1,0 +1,22 @@
+# * * * *
+#  * * *
+#   * *
+#    *
+#   * *
+#  * * *
+# * * * *
+
+class Main():
+    a=int(input("Enter the Values : "))
+    for i in range(a):
+        for j in range(a, a - i, -1):
+            print(" ", end=" ")
+        for j in range(a - i):
+            print("  * ", end="")
+        print()
+    for i in range(a-1):
+        for j in range(i,a-2,1):
+            print(" ",end=" ")
+        for j in range(a,a-i-2,-1):
+            print("  * ", end="")
+        print()
