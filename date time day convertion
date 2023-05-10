@@ -1,0 +1,11 @@
+from datetime import datetime, date, time
+class Main():
+    date1=datetime(2014,5,16,14,45,5)
+    print(date1.day)
+    print(date1.hour)
+    print(date1.month)
+    date3=datetime.strptime('20140516134328','%Y%m%d%H%M%S')
+    date1=datetime(2014,5,16)
+    date2=datetime(2014,5,19)
+    datediff=date2-date3
+    print(datediff)
