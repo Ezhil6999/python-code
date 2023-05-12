@@ -8,5 +8,5 @@ while True:
     else:
         break
 print(para)
-output=".".join(para)
-print(output)
+outputs=".".join(para)
+print(outputs)
