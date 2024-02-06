@@ -1,0 +1,9 @@
+import uuid
+
+# Generate a UUID based on the host ID and current time
+uuid1 = uuid.uuid1()
+print("UUID1:", uuid1)
+
+# Generate a UUID using random or pseudo-random numbers
+uuid4 = uuid.uuid4()
+print("UUID4:", uuid4)
