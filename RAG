@@ -1,0 +1,28 @@
+import PyPDF2
+from transformers import AutoModel,AutoTokenizer
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+import pickle
+model = SentenceTransformer("BAAI/bge-m3", trust_remote_code = True)
+pdf_reader = PyPDF2.PdfReader("vits_paper.pdf") 
+Final_text = []
+for page_number, page in enumerate(pdf_reader.pages): 
+    page_text=page.extract_text()
+    Final_text.extend(page_text.split("."))
+
+# text_embedding = model.encode(Final_text)
+
+# with open("knowledge.pkl",'wb') as f:
+#     pickle.dump(text_embedding,f)
+print("completed ----------------------------------------")
+with open('knowledge.pkl','rb') as f:
+    text_embedding = pickle.load(f)
+while True:
+    question = input("enter your question")
+    question_embedding = model.encode([question])
+    value = cosine_similarity(text_embedding,question_embedding)
+    index_list = [[index , i] for index,i in enumerate(value)]
+    sorted_index_list = sorted(index_list,key=lambda x:x[1])
+    print(sorted_index_list)
+    for i in sorted_index_list[len(sorted_index_list)-3:]:
+        print(Final_text[i[0]],"---------------------",i[1])
