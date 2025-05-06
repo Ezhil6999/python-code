@@ -1,0 +1,141 @@
+Seven different symbols represent Roman numerals with the following values:
+
+Symbol	Value
+I	1
+V	5
+X	10
+L	50
+C	100
+D	500
+M	1000
+Roman numerals are formed by appending the conversions of decimal place values from highest to lowest. Converting a decimal place value into a Roman numeral has the following rules:
+
+If the value does not start with 4 or 9, select the symbol of the maximal value that can be subtracted from the input, append that symbol to the result, subtract its value, and convert the remainder to a Roman numeral.
+If the value starts with 4 or 9 use the subtractive form representing one symbol subtracted from the following symbol, for example, 4 is 1 (I) less than 5 (V): IV and 9 is 1 (I) less than 10 (X): IX. Only the following subtractive forms are used: 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD) and 900 (CM).
+Only powers of 10 (I, X, C, M) can be appended consecutively at most 3 times to represent multiples of 10. You cannot append 5 (V), 50 (L), or 500 (D) multiple times. If you need to append a symbol 4 times use the subtractive form.
+Given an integer, convert it to a Roman numeral.
+
+ 
+
+Example 1:
+
+Input: num = 3749
+
+Output: "MMMDCCXLIX"
+
+Explanation:
+
+3000 = MMM as 1000 (M) + 1000 (M) + 1000 (M)
+ 700 = DCC as 500 (D) + 100 (C) + 100 (C)
+  40 = XL as 10 (X) less of 50 (L)
+   9 = IX as 1 (I) less of 10 (X)
+Note: 49 is not 1 (I) less of 50 (L) because the conversion is based on decimal places
+Example 2:
+
+Input: num = 58
+
+Output: "LVIII"
+
+Explanation:
+
+50 = L
+ 8 = VIII
+Example 3:
+
+Input: num = 1994
+
+Output: "MCMXCIV"
+
+Explanation:
+
+1000 = M
+ 900 = CM
+  90 = XC
+   4 = IV
+
+
+
+
+
+
+class Solution:
+    def find_consicutive(self,value):
+        if len(value)==1:
+            return 0
+        elif len(value) == 2:
+            if value[0]==value[1]:
+                return 1
+            else:
+                return 0
+        else:
+            index = 1
+            for i in range(1,len(value)):
+                if value[i-1] == value[i]:
+                    if len(value)-1 == i:
+                        return len(value)-1
+                    index +=1
+                    continue
+                else:
+                    return index-1
+            
+
+    def intToRoman(self, num: int) -> str:
+        symbolToValue  = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
+        valueTosymbols = {1:"I",5:"V",10:"X",50:"L",100:"C",500:"D",1000:"M"}
+        final_string = ""
+        if not len(str(num))<=4:
+            first_add_digit = len(str(num))-4
+            final_extra_digit = int(str(str(num)[:first_add_digit]+"0"))
+            final_string  = "M"*final_extra_digit
+            num=str(num)[-4:]
+        current_index = len(str(num))
+        for i in str(num):
+            if current_index==4:
+                index_4_value = "M"*int(i)
+                final_string = final_string+index_4_value
+            elif current_index==3:
+                if int(i)>=5:
+                    index3_extra = int(i)-5
+                    if i=="9":
+                        final_string = final_string + "CM"
+                    else:
+                        final_string = final_string + "D" + "C" *  index3_extra
+                else:
+                    index3_extra = i
+                    if i=="4":
+                        final_string = final_string + "CD"
+                    else:
+                        final_string = final_string + "C" * int(index3_extra)
+            elif current_index==2:
+                if int(i)>=5:
+                    index2_extra = int(i)-5
+                    if i=="9":
+                        final_string = final_string + "XC"
+                    else:
+                        final_string = final_string + "L" + "X" *  index2_extra
+                else:
+                    index2_extra = i
+                    if i=="4":
+                        final_string = final_string + "XL"
+                    else:
+                        final_string = final_string + "X" * int(index2_extra)
+            elif current_index==1:
+                if int(i)>=5:
+                    index1_extra = int(i)-5
+                    if i=="9":
+                        final_string = final_string + "IX"
+                    else:
+                        final_string = final_string + "V" + "I" *  index1_extra
+                else:
+                    index1_extra = i
+                    if i=="4":
+                        final_string = final_string + "IV"
+                    else:
+                        final_string = final_string + "I" * int(index1_extra)
+                return final_string
+            current_index = current_index - 1
+
+
+
+        
+        
